@@ -40,8 +40,8 @@ export function wordExists(word: string) {
 }
 
 
-export function getExactSearch (word: string) {
-  return Words.find(r=>r[1]==word||r[4]==word) || null
+export function getExactSearch (word: string, hiragana: boolean = true) {
+  return Words.find(r=>r[1]==word||(hiragana && r[4]==word)) || null
 }
 
 

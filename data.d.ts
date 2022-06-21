@@ -25,7 +25,7 @@ export declare const Words: Row[];
 /** FUNCTIONS */
 export declare function getRowFromId(domain: Domain, id: number): Row;
 export declare function wordExists(word: string): boolean;
-export declare function getExactSearch(word: string): Row | null;
+export declare function getExactSearch(word: string, hiragana?: boolean): Row | null;
 export declare type SentenceMeta = {
 	word: string;
 	meta: Row | null;
