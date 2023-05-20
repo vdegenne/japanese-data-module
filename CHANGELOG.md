@@ -1,6 +1,14 @@
 # ChangeLog
 
+## 2.2.1
+
+### Patch Changes
+
+- `assert { type: 'json' }`
+
 ## 2.2.0
+
+## Minor Changes
 
 - Provide `lemmas` 
 

@@ -3,6 +3,7 @@
 		"module": "esnext",
 		"target": "es2022",
 		"moduleResolution": "node",
+		"strict": true,
 		"rootDir": "src",
 		"outDir": "lib",
 		"resolveJsonModule": true,
@@ -11,6 +12,6 @@
 		"declarationMap": true,
 		"sourceMap": true
 	},
-	"include": ["src", "data/*.json"],
+	"include": ["src"],
 	"exclude": ["tests"]
 }
