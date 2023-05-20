@@ -11,6 +11,6 @@
 		"declarationMap": true,
 		"sourceMap": true
 	},
-	"include": ["src/**/*.ts"],
+	"include": ["src", "data/*.json"],
 	"exclude": ["tests"]
 }

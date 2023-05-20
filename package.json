@@ -1,6 +1,6 @@
 {
 	"name": "japanese-data-module",
-	"version": "2.1.0",
+	"version": "2.2.0",
 	"type": "module",
 	"main": "lib/index.js",
 	"module": "lib/index.js",
@@ -22,7 +22,6 @@
 		}
 	},
 	"devDependencies": {
-		"rimraf": "^5.0.1",
 		"typescript": "^5.0.4",
 		"wireit": "^0.9.5"
 	},
