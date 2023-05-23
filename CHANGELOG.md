@@ -1,5 +1,11 @@
 # ChangeLog
 
+## 2.2.2
+
+### Patch Changes
+
+- Fixed words: でも
+
 ## 2.2.1
 
 ### Patch Changes

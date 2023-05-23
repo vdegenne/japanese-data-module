@@ -1,6 +1,6 @@
 {
 	"name": "japanese-data-module",
-	"version": "2.2.1",
+	"version": "2.2.2",
 	"type": "module",
 	"main": "lib/index.js",
 	"module": "lib/index.js",
@@ -22,6 +22,7 @@
 		}
 	},
 	"devDependencies": {
+		"@types/node": "^20.2.3",
 		"typescript": "^5.0.4",
 		"wireit": "^0.9.5"
 	},
