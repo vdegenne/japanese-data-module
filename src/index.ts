@@ -16,10 +16,10 @@ import _jlpt1kanjis from './data/jlpt1-kanjis.json' assert {type: 'json'};
 import _jlpt0kanjis from './data/jlpt0-kanjis.json' assert {type: 'json'};
 import _lemmas from './data/lemmas.json' assert {type: 'json'};
 import type {KanjiRow, LemmaEntry, WordRow} from './types.js';
-import {RowIndexes} from './types.js';
+import {RowIndex} from './types.js';
 
 export type {KanjiRow, WordRow, RowIndex, Domain, LemmaEntry} from './types.js';
-export {RowIndexes, Domains} from './types.js';
+export {RowIndex as RowIndexes, Domains} from './types.js';
 
 export const lemmas = _lemmas as unknown as LemmaEntry[];
 
@@ -59,7 +59,7 @@ export const words = {
 /** functions */
 export function wordExists(bag: WordRow[], word: string) {
 	return bag.some(
-		(row) => word === row[RowIndexes.WORD] || word === row[RowIndexes.HIRAGANA]
+		(row) => word === row[RowIndex.WORD] || word === row[RowIndex.HIRAGANA]
 	);
 }
 
@@ -80,17 +80,17 @@ export function getExactSearch(
 	return (
 		bag.find(
 			(row) =>
-				word === row[RowIndexes.WORD] ||
-				(searchHiragana && word === row[RowIndexes.HIRAGANA])
+				word === row[RowIndex.WORD] ||
+				(searchHiragana && word === row[RowIndex.HIRAGANA])
 		) || null
 	);
 }
 
 export function kanjiExists(bag: KanjiRow[], kanji: string) {
-	return bag.some((row) => kanji === row[RowIndexes.KANJI]);
+	return bag.some((row) => kanji === row[RowIndex.KANJI]);
 }
 export function getKanjiRow(bag: KanjiRow[], kanji: string): KanjiRow | null {
-	return bag.find((row) => kanji === row[RowIndexes.KANJI]) || null;
+	return bag.find((row) => kanji === row[RowIndex.KANJI]) || null;
 }
 
 // export type SentenceMeta = {word: string; meta: Row | null}[];

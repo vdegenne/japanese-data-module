@@ -28,7 +28,7 @@ export type WordRow = [
 	/** hiragana version of the word */
 	hiragana: string
 ];
-export const RowIndexes = {
+export const RowIndex = {
 	/** id index */
 	ID: 0,
 	/** kanji index */
@@ -46,7 +46,7 @@ export const RowIndexes = {
 	/** word hiragana version index */
 	HIRAGANA: 4,
 } as const;
-export type RowIndex = (typeof RowIndexes)[keyof typeof RowIndexes];
+export type RowIndex = (typeof RowIndex)[keyof typeof RowIndex];
 
 // export type JlptWordEntry = [
 // 	word: string,
