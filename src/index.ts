@@ -18,8 +18,8 @@ import _lemmas from './data/lemmas.json' assert {type: 'json'};
 import type {KanjiRow, LemmaEntry, WordRow} from './types.js';
 import {RowIndex} from './types.js';
 
-export type {KanjiRow, WordRow, RowIndex, Domain, LemmaEntry} from './types.js';
-export {RowIndex as RowIndexes, Domains} from './types.js';
+export type {KanjiRow, WordRow, Domain, LemmaEntry} from './types.js';
+export {RowIndex, Domains} from './types.js';
 
 export const lemmas = _lemmas as unknown as LemmaEntry[];
 
