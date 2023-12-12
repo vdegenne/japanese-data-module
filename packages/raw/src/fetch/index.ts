@@ -16,6 +16,9 @@ import {sleep} from './utils.js';
 
 export const OUT_DIR = 'out';
 
+let id = 1;
+let gap = 50;
+
 async function start() {
 	await fetchKanjis();
 	await fetchWords();
@@ -39,6 +42,7 @@ async function fetchKanjis() {
 			const cards = getCards(doc);
 			cards.forEach((card) => {
 				data.push({
+					id: id++,
 					v: getCardName(card),
 					meaning: getCardMeaning(card),
 					tags: getCardTags(card),
@@ -53,6 +57,7 @@ async function fetchKanjis() {
 			pathlib.join(OUT_DIR, `${type}-jlpt${jlpt}.json`),
 			JSON.stringify(data)
 		);
+		id += gap;
 	}
 }
 
@@ -74,6 +79,7 @@ async function fetchWords() {
 			const cards = getCards(doc);
 			cards.forEach((card) => {
 				data.push({
+					id: id++,
 					v: getCardName(card),
 					hirakata: getCardHiragana(card),
 					roman: getCardRoman(card),
@@ -90,5 +96,6 @@ async function fetchWords() {
 			pathlib.join(OUT_DIR, `${type}-jlpt${jlpt}.json`),
 			JSON.stringify(data)
 		);
+		id += gap;
 	}
 }

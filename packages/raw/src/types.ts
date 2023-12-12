@@ -1,4 +1,5 @@
 export interface Kanji {
+	id: number;
 	/** value */
 	v: string;
 	meaning: string;
@@ -6,6 +7,7 @@ export interface Kanji {
 }
 
 export interface Word {
+	id: number;
 	/** value */
 	v: string;
 	hirakata?: string;

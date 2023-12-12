@@ -15,6 +15,8 @@ declare global {
 	}
 }
 
+console.log(styles);
+
 const set = {
 	kanjis: [kanji5, kanji4, kanji3, kanji2, kanji1],
 	words: [word5, word4, word3, word2, word1],

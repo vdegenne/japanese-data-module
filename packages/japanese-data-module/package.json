@@ -1,0 +1,32 @@
+{
+	"name": "japanese-data-module",
+	"version": "2.3.1",
+	"type": "module",
+	"scripts": {
+		"build": "wireit",
+		"test": "wireit"
+	},
+	"wireit": {
+		"build": {
+			"command": "tsc --pretty",
+			"clean": "if-file-deleted",
+			"files": [
+				"tsconfig.json",
+				"src"
+			],
+			"output": [
+				"lib"
+			]
+		},
+		"test": {
+			"command": "node lib/test.js",
+			"dependencies": [
+				"../raw:build",
+				"build"
+			]
+		}
+	},
+	"devDependencies": {
+		"@jdm-internal/raw": "*"
+	}
+}

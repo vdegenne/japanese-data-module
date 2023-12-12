@@ -38,6 +38,18 @@
 			]
 		}
 	},
+	"exports": {
+		"./kanji5.json": "./out/kanji-jlpt5.json",
+		"./kanji4.json": "./out/kanji-jlpt4.json",
+		"./kanji3.json": "./out/kanji-jlpt3.json",
+		"./kanji2.json": "./out/kanji-jlpt2.json",
+		"./kanji1.json": "./out/kanji-jlpt1.json",
+		"./word5.json": "./out/word-jlpt5.json",
+		"./word4.json": "./out/word-jlpt4.json",
+		"./word3.json": "./out/word-jlpt3.json",
+		"./word2.json": "./out/word-jlpt2.json",
+		"./word1.json": "./out/word-jlpt1.json"
+	},
 	"devDependencies": {
 		"@types/jsdom": "^21.1.6",
 		"chalk": "^5.3.0",
