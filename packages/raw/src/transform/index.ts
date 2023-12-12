@@ -17,4 +17,6 @@ for (; i < 5; ++i) {
 		meaning: item.meaning,
 		tags: item.tags,
 	}));
+
+	// await fs.promises.writeFile(filepath, JSON.stringify(newData));
 }
