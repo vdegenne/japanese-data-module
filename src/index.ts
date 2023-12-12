@@ -3,17 +3,17 @@
  * Copyright (c) 2023 Valentin Degenne
  * SPDX-License-Identifier: MIT
  */
-import _jlpt5words from './data/jlpt5-words.json' assert {type: 'json'};
-import _jlpt4words from './data/jlpt4-words.json' assert {type: 'json'};
-import _jlpt3words from './data/jlpt3-words.json' assert {type: 'json'};
-import _jlpt2words from './data/jlpt2-words.json' assert {type: 'json'};
-import _jlpt1words from './data/jlpt1-words.json' assert {type: 'json'};
 import _jlpt5kanjis from './data/jlpt5-kanjis.json' assert {type: 'json'};
 import _jlpt4kanjis from './data/jlpt4-kanjis.json' assert {type: 'json'};
 import _jlpt3kanjis from './data/jlpt3-kanjis.json' assert {type: 'json'};
 import _jlpt2kanjis from './data/jlpt2-kanjis.json' assert {type: 'json'};
 import _jlpt1kanjis from './data/jlpt1-kanjis.json' assert {type: 'json'};
 import _jlpt0kanjis from './data/jlpt0-kanjis.json' assert {type: 'json'};
+import _jlpt5words from './data/jlpt5-words.json' assert {type: 'json'};
+import _jlpt4words from './data/jlpt4-words.json' assert {type: 'json'};
+import _jlpt3words from './data/jlpt3-words.json' assert {type: 'json'};
+import _jlpt2words from './data/jlpt2-words.json' assert {type: 'json'};
+import _jlpt1words from './data/jlpt1-words.json' assert {type: 'json'};
 import _lemmas from './data/lemmas.json' assert {type: 'json'};
 import type {KanjiRow, LemmaEntry, WordRow} from './types.js';
 import {RowIndex} from './types.js';

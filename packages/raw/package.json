@@ -1,0 +1,47 @@
+{
+	"name": "@jdm-internal/raw",
+	"type": "module",
+	"scripts": {
+		"build": "wireit",
+		"stats": "wireit",
+		"fetch": "wireit",
+		"transform": "wireit"
+	},
+	"wireit": {
+		"build": {
+			"command": "tsc --pretty",
+			"clean": "if-file-deleted",
+			"files": [
+				"tsconfig.json",
+				"src"
+			],
+			"output": [
+				"lib"
+			]
+		},
+		"transform": {
+			"command": "node lib/transform/index.js",
+			"dependencies": [
+				"build"
+			]
+		},
+		"stats": {
+			"command": "node lib/stats/index.js",
+			"dependencies": [
+				"build"
+			]
+		},
+		"fetch": {
+			"command": "NODE_ENV=DEV node lib/fetch/index.js",
+			"dependencies": [
+				"build"
+			]
+		}
+	},
+	"devDependencies": {
+		"@types/jsdom": "^21.1.6",
+		"chalk": "^5.3.0",
+		"jsdom": "^23.0.1",
+		"vite": "^5.0.8"
+	}
+}
