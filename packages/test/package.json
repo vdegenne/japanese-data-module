@@ -1,5 +1,6 @@
 {
 	"name": "@jdm-internal/test",
+	"type": "module",
 	"devDependencies": {
 		"japanese-data-module": "^2.3.1"
 	}
