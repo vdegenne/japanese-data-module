@@ -13,7 +13,7 @@ for (const type of ['kanji', 'word']) {
 		for (const item of data) {
 			item.id = id++;
 		}
-		// await fs.promises.writeFile(filepath, JSON.stringify(data))
+		// await fs.promises.writeFile(filepath, JSON.stringify(data));
 		id += gap;
 	}
 	// give an extra space for kanji <-> words
