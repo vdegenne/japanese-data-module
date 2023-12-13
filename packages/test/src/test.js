@@ -1,4 +1,5 @@
-import test from 'japanese-data-module/tagless-noroman/word-jlpt2.json' assert {type: 'json'};
-import {RI} from 'japanese-data-module/tagless-noroman';
+import test from 'japanese-data-module/full/kanji-jlpt5.json' assert {type: 'json'};
+import {RI, objectifyKanjiRow} from 'japanese-data-module/full';
 
-console.log(test[0][RI.MEANING]);
+const o = objectifyKanjiRow(test[9]);
+console.log(o.meaning);
