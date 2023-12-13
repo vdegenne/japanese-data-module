@@ -4,10 +4,17 @@
 	"type": "module",
 	"scripts": {
 		"build": "wireit",
+		"build:ts": "wireit",
 		"build:data": "wireit"
 	},
 	"wireit": {
 		"build": {
+			"dependencies": [
+				"build:ts",
+				"build:data"
+			]
+		},
+		"build:ts": {
 			"command": "tsc --pretty",
 			"clean": "if-file-deleted",
 			"files": [
@@ -16,6 +23,9 @@
 			],
 			"output": [
 				"lib"
+			],
+			"dependencies": [
+				"../raw:build"
 			]
 		},
 		"build:data": {
@@ -28,8 +38,52 @@
 			],
 			"dependencies": [
 				"../raw:build",
-				"build"
+				"build:ts"
 			]
+		}
+	},
+	"exports": {
+		"./full/kanji5.json": "./lib/data/full/kanji-jlpt5.json",
+		"./full/kanji4.json": "./lib/data/full/kanji-jlpt4.json",
+		"./full/kanji3.json": "./lib/data/full/kanji-jlpt3.json",
+		"./full/kanji2.json": "./lib/data/full/kanji-jlpt2.json",
+		"./full/kanji1.json": "./lib/data/full/kanji-jlpt1.json",
+		"./full/word5.json": "./lib/data/full/word-jlpt5.json",
+		"./full/word4.json": "./lib/data/full/word-jlpt4.json",
+		"./full/word3.json": "./lib/data/full/word-jlpt3.json",
+		"./full/word2.json": "./lib/data/full/word-jlpt2.json",
+		"./full/word1.json": "./lib/data/full/word-jlpt1.json",
+		"./full": {
+			"import": "./lib/full/index.js",
+			"types": "./lib/full/index.d.ts"
+		},
+		"./tagless/kanji5.json": "./lib/data/tagless/kanji-jlpt5.json",
+		"./tagless/kanji4.json": "./lib/data/tagless/kanji-jlpt4.json",
+		"./tagless/kanji3.json": "./lib/data/tagless/kanji-jlpt3.json",
+		"./tagless/kanji2.json": "./lib/data/tagless/kanji-jlpt2.json",
+		"./tagless/kanji1.json": "./lib/data/tagless/kanji-jlpt1.json",
+		"./tagless/word5.json": "./lib/data/tagless/word-jlpt5.json",
+		"./tagless/word4.json": "./lib/data/tagless/word-jlpt4.json",
+		"./tagless/word3.json": "./lib/data/tagless/word-jlpt3.json",
+		"./tagless/word2.json": "./lib/data/tagless/word-jlpt2.json",
+		"./tagless/word1.json": "./lib/data/tagless/word-jlpt1.json",
+		"./tagless": {
+			"import": "./lib/tagless/index.js",
+			"types": "./lib/tagless/index.d.ts"
+		},
+		"./tagless-noroman/kanji5.json": "./lib/data/tagless-noroman/kanji-jlpt5.json",
+		"./tagless-noroman/kanji4.json": "./lib/data/tagless-noroman/kanji-jlpt4.json",
+		"./tagless-noroman/kanji3.json": "./lib/data/tagless-noroman/kanji-jlpt3.json",
+		"./tagless-noroman/kanji2.json": "./lib/data/tagless-noroman/kanji-jlpt2.json",
+		"./tagless-noroman/kanji1.json": "./lib/data/tagless-noroman/kanji-jlpt1.json",
+		"./tagless-noroman/word5.json": "./lib/data/tagless-noroman/word-jlpt5.json",
+		"./tagless-noroman/word4.json": "./lib/data/tagless-noroman/word-jlpt4.json",
+		"./tagless-noroman/word3.json": "./lib/data/tagless-noroman/word-jlpt3.json",
+		"./tagless-noroman/word2.json": "./lib/data/tagless-noroman/word-jlpt2.json",
+		"./tagless-noroman/word1.json": "./lib/data/tagless-noroman/word-jlpt1.json",
+		"./tagless-noroman": {
+			"import": "./lib/tagless-noroman/index.js",
+			"types": "./lib/tagless-noroman/index.d.ts"
 		}
 	},
 	"devDependencies": {

@@ -3,12 +3,17 @@
 	"type": "module",
 	"scripts": {
 		"build": "wireit",
+		"build:ts": "wireit",
 		"stats": "wireit",
-		"fetch": "wireit",
-		"transform": "wireit"
+		"fetch": "wireit"
 	},
 	"wireit": {
 		"build": {
+			"dependencies": [
+				"build:ts"
+			]
+		},
+		"build:ts": {
 			"command": "tsc --pretty",
 			"clean": "if-file-deleted",
 			"files": [
@@ -19,20 +24,14 @@
 				"lib"
 			]
 		},
-		"transform": {
-			"command": "node lib/transform/index.js",
+		"fetch": {
+			"command": "NODE_ENV=DEV node lib/fetch/index.js",
 			"dependencies": [
 				"build"
 			]
 		},
 		"stats": {
 			"command": "node lib/stats/index.js",
-			"dependencies": [
-				"build"
-			]
-		},
-		"fetch": {
-			"command": "NODE_ENV=DEV node lib/fetch/index.js",
 			"dependencies": [
 				"build"
 			]

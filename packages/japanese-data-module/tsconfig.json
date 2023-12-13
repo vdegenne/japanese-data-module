@@ -4,6 +4,7 @@
 		"module": "NodeNext",
 		"moduleResolution": "NodeNext",
 		"outDir": "./lib/",
+		"declaration": true,
 		"resolveJsonModule": true,
 		"resolvePackageJsonExports": true,
 		"resolvePackageJsonImports": true
