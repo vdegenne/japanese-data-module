@@ -5,7 +5,7 @@
 		"moduleResolution": "NodeNext",
 		"outDir": "./lib/",
 		"resolveJsonModule": true,
-		// "declaration": true,
+		"declaration": true,
 		// "declarationMap": true,
 		// "inlineSourceMap": true,
 		// "inlineSources": true

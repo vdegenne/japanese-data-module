@@ -39,6 +39,10 @@
 		}
 	},
 	"exports": {
+		".": {
+			"import": "./lib/index.js",
+			"types": "./lib/index.d.ts"
+		},
 		"./kanji5.json": "./out/kanji-jlpt5.json",
 		"./kanji4.json": "./out/kanji-jlpt4.json",
 		"./kanji3.json": "./out/kanji-jlpt3.json",

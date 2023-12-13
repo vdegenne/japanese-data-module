@@ -4,7 +4,7 @@
 	"type": "module",
 	"scripts": {
 		"build": "wireit",
-		"test": "wireit"
+		"build:data": "wireit"
 	},
 	"wireit": {
 		"build": {
@@ -18,8 +18,14 @@
 				"lib"
 			]
 		},
-		"test": {
-			"command": "node lib/test.js",
+		"build:data": {
+			"command": "node lib/build/index.js",
+			"files": [
+				"lib/build/index.js"
+			],
+			"output": [
+				"lib/data"
+			],
 			"dependencies": [
 				"../raw:build",
 				"build"
