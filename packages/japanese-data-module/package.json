@@ -1,6 +1,6 @@
 {
 	"name": "japanese-data-module",
-	"version": "2.3.1",
+	"version": "3.0.1",
 	"type": "module",
 	"scripts": {
 		"build": "wireit",
@@ -43,6 +43,10 @@
 		}
 	},
 	"exports": {
+		".": {
+			"default": "./lib/full/index.js",
+			"types": "./lib/full/index.d.ts"
+		},
 		"./full": {
 			"import": "./lib/full/index.js",
 			"types": "./lib/full/index.d.ts"
@@ -61,5 +65,9 @@
 	},
 	"devDependencies": {
 		"@jdm-internal/raw": "*"
-	}
+	},
+	"files": [
+		"lib",
+		"!lib/build"
+	]
 }
